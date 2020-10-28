@@ -13,6 +13,9 @@ public class Main {
         }else {
             outfile = args[1];
         }
+        System.out.println("Task start...");
+        long startTime = System.currentTimeMillis();
         XlogFileDecoder.ParseFile(infile, outfile);
+        System.out.println(String.format("Task end and spent %d ms",System.currentTimeMillis() -startTime));
     }
 }
